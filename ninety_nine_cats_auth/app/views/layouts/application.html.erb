@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <header>
+      <% if current_user %>
+      <!-- calling upon the current user  -->
+        Username: <%= current_user.username %>
+        <button type="button" name="logout" action="">
+      <% else %>
+        <button type="button" name="login">
+      <% end %>
+    </header> 
     <%= yield %>
   </body>
 </html>
